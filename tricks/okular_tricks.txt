@@ -1,0 +1,3 @@
+alt+shift+left arrow   -  go back to the last view (useful when using hyperref links) 
+
+double-click on any review tool - prevents from automatic reselection 

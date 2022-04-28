@@ -1,0 +1,26 @@
+Alt+Arrow left / Arrow right 	Go to previous/next dir of already visited dirs
+
+ctrl+alt+file_name - quick search for file in the directory
+
+ctrl + pageup/down - change parent/child directory
+
+shift_f6 - rename in the same directory
+
+right arrow - command line
+
+tab - switch between active panels
+
+ctrl + t  - new tab
+
+ctrl + w  - close tab
+
+ctrl + tab  -  switch between tabs
+
+ctrl + u - exchange panels
+
+ctrl + right/left arrow  - duplicate current path to right/left panel 
+
+alt+f1/f2 - change left/right drive. It will place you in directory to which you changed after last change to this drive! 
+
+
+ctrl+enter and then enter? - open directory in windows explorator

@@ -1,0 +1,9 @@
+# Clear formatting in Excel > 2007
+Narzedzia glowne/Edycja/Wyczysc/Formaty
+
+
+# Break line instead of sticking out
+press Alt+Enter to insert a line break
+
+# Align text vertically to the top of the cell
+right click / format cells / alignment / vertical / to the top

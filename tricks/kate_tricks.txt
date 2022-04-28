@@ -1,0 +1,9 @@
+# ADD A NEW FILE FORMAT TO HIGHLIGHT AS PYTHON
+settings/configure kate/open\/save/Model and files/File type/Script-Python 
+# ADD *.mplstyle
+##
+
+ctrl+shift+f - exit from full-screen mode
+ctrl+k -  delete line
+ctrl+shift+- - fold/unfold all topmost loops/ifs etc
+ctrl+h (custom) - hide/show inactive views

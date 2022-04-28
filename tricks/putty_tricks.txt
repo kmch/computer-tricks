@@ -1,0 +1,8 @@
+# Passless
+https://help.dreamhost.com/hc/en-us/articles/215464758-How-do-I-set-up-passwordless-login-in-PuTTY-
+1. create and save publ and priv key with puttygen 
+2. put priv somewhere safe, e.g. C:\Users\Maciek\Moje\life\it\putty_HP_private_key.ppk
+3. scp the publ key to the server:~/.ssh
+4. append it to the authorized keys with ssh-keygen -i -f <publ_key_name> >> authorized_keys
+5. remove publ from the server
+6. launch putty and follow steps from the link

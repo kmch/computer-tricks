@@ -1,0 +1,40 @@
+Moje IT:
+
+1. Python: 
+- wszystko oprócz wskazanych w dalszych punktach, w szczególności:
+	* sejsmologia
+	* symulacje 
+
+
+2. Mathematica
+- obliczenia symboliczne, wykresy funkcji 
+
+
+3. C++/C
+- Arduino, mikrokontrolery
+- nauka działania komputera (obsługiwania pamięci)
+- wyrabianie dobrych nawyków programistycznych
+- programowanie obiektowe
+
+
+4. MATLAB/OCTAVE
+- obliczenia numeryczne, gdy w Pythonie jest to zagmatwane
+
+
+5. Gnuplot
+- szybkie wykresy 'symboliczne' pod Linuksem
+
+CZY NIEPEWNOŚĆ FITU (USING 1:2:3, CZYLI Z ERR) UWZGLĘDNIA DOBRZE TE NIEPEWNOŚCI DY?
+
+6. R
+- zaawansowana statystyka 
+
+
+7. Fortran
+- udoskonalanie starszych programów, opanowanie 'goto'
+
+
+
+8. CUDA
+
+9. 

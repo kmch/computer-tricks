@@ -1,0 +1,37 @@
+# shortcut to change keyboard typing (language) settings
+ctrl(left) + shift(right)
+##
+
+
+
+
+# fixing the hard drive 
+# sometimes it just gets stuck at e.g.
+# 0%, 10%, 11%, 28%...100%
+https://www.easeus.com/resource/stuck-at-scanning-and-repairing-drive.html
+
+# aktualizacja sterownik�w
+Driver Easy - �wietny programik
+- pobiera automatycznie, ale nie instaluje automatycznie (w wersji darmowej)
+- �eby to zrobi�, trzeba otworzy� lokalizacj� �ci�gni�tego sterownika (skopiowa� �cie�k�) - opcja otw�rz lokalizacj� z menu
+	danego sterowniku w ekranie wynikowym skanowania
+##
+
+# zmiana modemu powoduje konieczno�� rekonfiguracji drukarki bezprzewodowej Taty, kt�ra ��czy si� przez wifi
+trzeba znale�� na dysku, w nietrywialnym podfolderze zwi�zanym z drukark�, plik .exe otwieraj�cy ustawienia tego po��czenia.
+##
+
+# usuniecie zlosliwego oprogramowania
+w trybie awaryjnym z WLACZONA OBSLUGA SIECI (wciskac F8 F8 F8 F8 podczas bootu):
+1) wlaczyc mozliwosc odinstalowywania programow:
+  a) create a registry entry by typing in cmd-console:
+    REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot\Network\MSIServer" /VE /T REG_SZ /F /D "Service"
+  aa) DLA TRYBU AWARYJNEGO BEZ OBSLUGI SIECI:
+    REG ADD "HKLM\SYSTEM\CurrentControlSet\Control\SafeBoot\Minimal\MSIServer" /VE /T REG_SZ /F /D "Service"
+  b)  start the Windows Installer service by typing net start msiserver by typing:
+    net start msiserver 
+2) usunac oprogramowanie o ile wiemy, ktore to i system je widzi
+3) przeskanowac darmowym TDSSKiller Kasperskyego
+4) przeskanowac Malwarebytes Anti-Malware
+Powinno byc ok.
+##

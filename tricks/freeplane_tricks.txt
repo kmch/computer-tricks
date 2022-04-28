@@ -1,0 +1,12 @@
+
+# LaTeX
+in newer versions to make node a LaTeX-formatted just type 
+\latex 
+#followed by space and desired TeX code.
+# in older versions:
+ctrl+k
+##
+
+#
+alt+shift+l  -  link to other node
+##

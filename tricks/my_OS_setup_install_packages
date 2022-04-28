@@ -1,0 +1,25 @@
+conda install numpy matplotlib scipy pandas
+conda install -c conda-forge autologging
+conda install numba
+conda install sphinx
+
+
+
+conda install -c conda-forge pyvista
+conda install -c conda-forge ipyvtklink
+conda install libiconv
+
+
+sudo apt install gmt
+
+# HPC
+sudo apt install libomp-dev
+sudo apt install openmpi-bin
+
+Configure jupyterlab
+The jupyter-matplotlib extension can make your Matplotlib interactive again. Simply enable it using a magic command %matplotlib widget, your fancy 3D chart will become interactive.
+
+conda install -c conda-forge jupyter_contrib_nbextensions
+conda install -c conda-forge jupyterthemes
+jt -t grade3 -T
+# -T is to make toggle toolbar visible!

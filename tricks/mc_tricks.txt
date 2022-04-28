@@ -1,0 +1,40 @@
+mc -b    -  uruchom bez kolorów
+
+/usr/share/mc/skins
+~/.config/mc/ini
+~/.bashrc  żeby wpisując 'mc', tak naprawdę uruchamiać skrypt mc-wrapper.sh, dzięki któremu po wyłączeniu midnight commandera jesteśmy w katalogu, który w nim przeglądaliśmy trzeba dodać w tym pliku: alias mc='. /usr/share/mc/bin/mc-wrapper.sh'. Oczywiście trzeba się upewnić, czy na pewno ta ścieżka jest poprawna u nas!
+
+insert/prawoklik    -  zaznaczenie plików
++         -  zaznacz na podstawie wyrażeń regularnych. Wpisanie * zaznaczy wszystko
+-         -  jw. tylko odznacz. 
+*         -  reverse selection. If nothing was selected, all files will get         
+             selected.
+
+Esc is a meta-key: in cases where a function key or Alt-key combination is not available due to interference from outside programs, use the Esc key instead.
+esc, esc  -  zamknięcie okna dialogowego
+esc, tab  -  autouzupełnianie
+esc, tab, esc, tab  -  wyświetl wszystkie możliwości autouzupełniania
+esc, p    -  wyswietl poprzednie polecenie
+esc, n    -  wyswietl nastepne polecenie 
+
+alt+,     -  przełącz na góra/dół - przydatne przy długich nazwach katalogów
+alt+i     -  otwórz aktualny folder w panelu obok
+alt+o     -  otwórz zawartość zaznaczonego folderu w panelu obok
+alt+t     -  przełączaj między różnymi trybami wyświetlania
+alt+y     -  idź do poprzedniego katalogu
+alt+u     -  idź do następnego katalogu
+alt+shift+h - pokaż historię przeglądanych katalogów
+alt+s, 'tekst'  -  znajdź plik zaczynający się od 'tekst'. Spróbuj * na początku
+alt+?     -  szukanie (de facto alt+shift+'klawisz z ?')
+
+F9        -  przejście do górnego menu (lewy, plik, polecenie, ...
+
+ctrl+x, i -  szczegółowe info o obiekcie w panelu obok
+ctrl+\    -  lista podręcznych katalogów
+ctrl+x, h -  dodaj bieżący katalog do listy podręcznych
+ctrl+o    -  włączenie/wyłączenie obsługi powłoki
+ctrl + enter - copy the currently selected file’s name to the shell.
+ctrl + shift + enter - same as above, but the full path is copied.
+ctrl+u    -  zamień panele   
+
+shift + F3  -  przeglądaj zawartość pliku

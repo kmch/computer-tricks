@@ -1,0 +1,19 @@
+# search using operators, e.g.:
+author: Virieux
+# Author, Title, Publication, Year, and Notes are all valid operators. 
+##
+
+# exclude keywords with '-':
+"waveform inversion" -acoustic
+##
+
+# grouping in folders can be cumbersome, sometimes impossible (and creates duplicates)
+# use tags!!!! (add them in document details! search for them same as in Evernote) 
+tag: seismics
+# It’s also possible to do some really cool stuff with tags using the Mendeley API, 
+# such as building topic maps based on tag co-occurrence, all linked
+# to the research papers in one of the world’s largest open collections of research.
+
+# add supplementary files
+# Down at the bottom of the details pane in Mendeley Desktop there’s a field labeled 
+# Files. Click in this field and you can attach files to the reference

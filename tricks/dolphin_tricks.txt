@@ -1,0 +1,15 @@
+Ctrl+Click 	Select multiple items, one at a time
+Shift+Click 	Select multiple items, consecutive range
+Ctrl+t 	New Tab
+Ctrl+, 	Switch to next tab
+Ctrl+. 	Switch to previous tab
+Ctrl+l 	Show Full location
+F3 	Split View
+Ctrl+1 	View Mode 'Icons'
+Ctrl+2 	View Mode 'Details'
+Ctrl+3 	View Mode 'Columns'
+F9 	Go to Places
+F11 	Activate Information Panel
+F7 	View Folders Panel
+F4 	View Konsole Terminal Emulator
+Shift+F4 	View Konsole in new window

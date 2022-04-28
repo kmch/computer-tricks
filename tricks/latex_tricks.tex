@@ -1,0 +1,344 @@
+
+% New line after paragraph.
+\paragraph{Equation of motion}~\\ This text will be in a new line.
+
+% partial derivatives, (see LaTeX_my_templates for more) 
+\newcommand{\pder}[2][]{\frac{\partial#1}{\partial#2}}
+% dy/dx:
+\pder[y]{x}
+% d/dx:
+\pder{x}
+%%
+
+
+% line numbering 
+\usepackage{lineno}
+\linenumbers
+%%
+
+% LISTING FORTRAN CODE WITH SYNTAX-COLORING
+\usepackage{listings}
+\lstset{language=[90]Fortran,
+  basicstyle=\ttfamily,
+  keywordstyle=\color{red},
+  commentstyle=\color{green},
+  morecomment=[l]{!\ }% Comment only with space after !
+}
+%%
+
+
+% ASTRONOMICAL SYMBOLS
+\usepackage{mathabx} 
+$\Earth$
+%%
+
+% LAGRANGIAN SYMBOL
+\newcommand{\Lagr}{\mathcal{L}} 
+%% 
+
+% ELECTRIC CIRCUITS SYMBOLS
+\usepackage{circuitikz} 
+\begin{document}
+\ctikzset{bipoles/length=.6cm}
+\newcommand\esymbol[1]{\begin{circuitikz}
+\draw (0,0) to [#1] (1,0); \end{circuitikz}}
+% CAN'T BE PUT IN THE SECTION HEADER
+\esymbol{generic} % RESISTOR 
+% ...
+%%
+
+% FULL-WIDTH FIGURES IN A 2-COLUMN DOC
+\begin{figure*}
+\end{figure*}
+%%
+
+% DOCUMENT WITH DIFFERENCES
+sudo apt-get install latexdiff
+latexdiff draft.tex revision.tex > diff.tex
+latexdiff -t CTRADITIONAL draft.tex revision.tex > diff.tex
+%     UNDERLINE – Added text is wavy-underlined and blue, discarded text is struck out and red
+%     CTRADITIONAL – Added text is blue and set in sans-serif, and a red footnote is created for each discarded piece of text
+%     TRADITIONAL – Like CTRADITIONAL but without the use of color
+%     CFONT – Added text is blue and set in sans-serif, and discarded text is red and very small size
+%     FONTSTRIKE – Added text is set in sans-serif, discarded text small and struck out
+%     CHANGEBAR – Added text is blue, and discarded text is red. Additionally, the changed text is marked with a bar in the margin
+
+
+%%
+
+%% POPRAWNOŚĆ JĘZYKOWA
+
+% Znaki diakrytyczne:
+\k{a} %- ą/ę
+\c a  %- ą jak nie działa powyższe (ale TO NIE JEST poprawny ogonek)
+\'s   %- ś, ó, ź, Ń
+\.z   %- ż
+\l    %- ł, Ł
+\"u   %- u umlaut i inne
+\`e   %- jak w Amp\`ere (klawisz z tyldą)
+\`    %  (grave accent): à
+\'    %  (acute accent): á
+\^    %  (circumflex or “hat”): â
+\"    %  (umlaut or dieresis): ä
+\~    %  (tilde or “squiggle”): ã
+\=    %  (macron or “bar”): ā
+\.    %  (dot accent): ȧ
+\u    %  (breve accent): ă
+\v    %  (háček or “check”): ǎ
+\H    %  (long Hungarian umlaut): ő
+\t    %  (tie-after accent): a͡
+\c    %  (cedilla): ş
+\d    %  (dot-under accent): ạ
+\b    %  (bar-under accent): ο̩
+\k    %  (ogonek): ą
+
+%%
+
+% myślnik, półpauza, dywiz, minus
+% myślnik
+\LaTeX --- moja miłość
+% myślnik w angielskim (bez spacji)
+\LaTeX---moja miłość
+% lub bardziej estetycznie (krócej), ale purysta by się obraził:
+\LaTeX -- moja miłość 
+\LaTeX--moja miłość
+% półpauza (zakresy) - bez odstępów, jeśli otaczają ją liczby:
+str. 11--13
+1935--2016
+% a jeśli nie, to z odstępami:
+3 marca -- 2 października
+% dywiz (łącznik) - łączy wyrazy wieloczłonowe:
+niebiesko-czarni
+% uwaga, polskie dzielenie wyrazów każe:
+niebiesko-
+-czarni
+% żeby to uzyskać:
+- pakiet ,,platex'' do j. polskiego
+- zapis: niebiesko{\dywiz}czarni
+% minus
+$-2$
+%%
+
+% ułamek dziesiętny w polskiej typografii
+$0{,}5$
+% lub:
+\usepackage{icomma} % turns off unwanted space after comma in math mode
+$0,5$
+%%
+
+% quotation marks (cudzysłów)
+``quotation''
+% W języku polskim cudzysłów otwierający oznacza się dwoma przecinkami ,, , natomiast zamykający – dwoma apostrofami ’’.
+,,cytat''
+%%
+
+%%%
+
+
+
+
+%% INNE
+
+% when \newpage is ignored (TeX thinks it's already empty)
+\null\newpage
+% to suppress showing the number (but it's included into numbering)
+\thispagestyle{empty}
+\null\newpage % in this order!!!
+%%
+
+% mailto
+\href{mailto:mwilde@igf.fuw.edu.pl}{mwilde@igf.fuw.edu.pl}
+%%
+
+%
+\chapter[toc version]{doc version}
+\chaptermark{version for header (usually shortened)}
+%%
+
+%
+\begin{itemize}
+  \item [] empty bullet
+\end{itemize}
+%%
+
+% lorem ipsum
+\usepackage{blindtext}
+\Blindtext[2][3] % where 2 (here) means number of paragraphs, and 3 (here) the measures the length of each paragraph
+%%
+
+
+%%%
+
+
+
+
+%% TABELE
+% Tabela instead of tablica
+\renewcommand*{\tablename}{Tabela}
+%%
+
+% change of fontsize in table
+\tiny % right after \begin{table}
+%%
+
+%%%
+
+
+%% SPISY
+% prevent ToC from appearing in... Toc
+\begin{KeepFromToc}
+Spis Treści
+\end{KeepFromToc}
+%%
+
+% add to ToC chapter*, section* etc. 
+Wprowadzenie <<Chapter*>> % this line is as usual
+\addcontentsline{toc}{chapter}{\numberline{}Wprowadzenie} % this special line follows
+%%
+
+%%%
+
+
+
+%% MATEMATYKA
+
+% pogrubienie w trybie matematycznym
+$boldsymbol{v}$
+%%
+
+% granice całki \int albo sumy \sum NAD symbolem, a nie obok (zwykłe _ i ^)
+\frac{\int\limits_{1}^{2}R\left|y\right|dx}{l_m}
+%%
+
+% Newton symbol
+{N}\choose{k}
+% or in case of problems
+{{N}\choose{k}}
+%%
+
+% end of proof symbol
+\usepackage{amsthm}
+\begin{proof}
+\end{proof}
+%%
+
+%
+\bm bold math (can denote vectors instead of arrow - \vec)
+%%
+
+%
+\vec vector
+\ge         %- 'greater than or equal to' sign
+\le         %- 'less than or equal to' sign
+\permil     %- permil (promil)
+\neq        %- znak 'nie równa się'
+\Rightarrow %- implikacja
+\ast        %- gwiazdka (splot)
+
+%%
+
+% double-line letters (sets of numbers style)
+\mathbb{R}
+% another fancy style
+\mathcal{R}
+%%
+
+%%%
+
+
+
+
+%
+\lettrine[lines=2]{\color{MidnightBlue}W}{}
+%%
+
+% fancy colors
+NavyBlue
+RoyalBlue
+MidnightBlue
+BlueViolet
+\def\cthesissetcolorbluemagenta{%
+	\cthesissetcolor{cmyk}{1, .50, .10, .01}{.18, .98, .18, 0}%
+}
+
+% sets the blue-green color theme (blue/green)
+\def\cthesissetcolorbluegreen{%
+	\cthesissetcolor{cmyk}{.61, .47, .03, 0}{.48, .05, .91, 0}%
+}
+%%
+
+
+
+
+
+
+
+
+%%
+
+
+% uninstall MikTeX on Windows
+I suppose you have a standard installation. Go to C:\Program Files\MiKTeX 2.9\miktex\bin\x64\internal\. 
+Right-click on uninstall_admin.exe and select Execute as Administrator
+%%
+%
+\int\limits_{-\infty}^{+\infty}
+%%
+
+% komentowanie wielu linii
+\iffalse
+I don't want this to appear
+\fi
+%%
+
+
+
+
+
+Spaces after commands without braces get suppressed (ignorowane, tłumione)
+%Example:
+%Copyright \copyright 2013
+To  prevent  this,  put  empty  curly  braces  after  the  command.
+%Example:
+%Copyright \copyright{} 2013
+
+
+Packages like longtable and array
+can help with
+more complex table formats
+
+spacja niełamliwa to tylda ~
+
+\mbox{long-piece-of-text}   - prevent from breaking the word
+
+\begin{itemize}
+\item[] kkhj % empty bullets
+\end{itemize}
+
+
+No number on title page:
+\maketitle sets the page style to plain, so you need to move \thispagestyle{empty} to after \maketitle:
+
+
+
+
+One should use \[ \] instead of $ $ for math mode, because latex doesn't support the latter!
+% \[ is a short form of \begin{displaymath} which one might expect to act like an un-numbered form of \begin{equation}. The amsmath package redefines \[ to be \begin{equation*} which is exactly an un-numbered form of the equation environment as defined by that package. In the core LaTeX definition \[ has the definition
+
+% directory to copy own or manually downloaded .sty file to. After that usually one needs to run:
+/usr/share/texmf/tex/latex  
+% to update the TeX's directory tree.
+sudo texhash
+
+% OR CREATE:
+~/texmf/tex/latex
+% TO PUT .cls AND .sty FILES THERE AND
+/home/kmc3817/texmf/bibtex
+% TO PUT .bst FILES THERE 
+% THEN JUST TYPE 
+texhash ~/texmf
+% YOU CAN CHECK IF THE FILES ARE SEEN BY TEX BY:
+kpsewhich filename.sty
+kpsewhich filename.cls
+kpsewhich filename.bst
+% THIS SHOULD PRINT ABSOLUTE PATHS TO THEM

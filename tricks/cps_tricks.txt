@@ -1,0 +1,8 @@
+# exit plot-window
+ps 
+kill calxvigID:
+##
+
+#
+plotxvig < SREGNC.PLT &
+##

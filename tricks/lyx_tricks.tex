@@ -1,0 +1,195 @@
+% Dark mode (Seti black, https://wiki.lyx.org/Tips/ColorSchemes)
+% In C:\Users\Maciek\AppData\Roaming\LyX2.3\preferences
+% (this folder is HIDDEN and can't be access from LyX 'open' tool. Use Explorer instead)
+% paste:
+\set_color "cursor" "#A6E22E"
+\set_color "background" "#151718"
+\set_color "foreground" "#d4d7d6"
+\set_color "selection" "#4FA5C7"
+\set_color "selectiontext" "#fefefe"
+\set_color "latex" "#A6E22E"
+\set_color "preview" "#A6E22E"
+\set_color "inlinecompletion" "#AE81FF"
+\set_color "nonuniqueinlinecompletion" "#AE81FF"
+\set_color "note" "#75715E"
+\set_color "notebg" "#252728"
+\set_color "commentbg" "#252728"
+\set_color "greyedoutbg" "#252728"
+\set_color "shaded" "#dc322f"
+\set_color "listingsbg" "#75715E"
+\set_color "footlabel" "#AE81FF"
+\set_color "urllabel" "#A6E22E"
+\set_color "urltext" "#A6E22E"
+\set_color "depthbar" "#A6E22E"
+\set_color "language" "#A6E22E"
+\set_color "command" "#A6E22E"
+\set_color "commandbg" "#252728"
+\set_color "commandframe" "#AE81FF"
+\set_color "special" "#66D9EF"
+\set_color "graphicsbg" "#252728"
+\set_color "math" "#A6E22E"
+\set_color "mathbg" "#252728"
+\set_color "mathmacrobg" "#252728"
+\set_color "mathmacroframe" "#A6E22E"
+\set_color "mathmacroblend" "#A6E22E"
+\set_color "mathmacronewarg" "#A6E22E"
+\set_color "mathframe" "#A6E22E"
+\set_color "mathcorners" "#A6E22E"
+\set_color "mathline" "#A6E22E"
+\set_color "collapsible" "#d0caff"
+\set_color "collapsibleframe" "#A6E22E"
+\set_color "insetframe" "#AE81FF"
+\set_color "eolmarker" "#A6E22E"
+\set_color "added_space" "#A6E22E"
+\set_color "appendix" "#dc322f"
+\set_color "changebar" "#4d4d4c"
+\set_color "addedtext" "#8b0000"
+\set_color "changedtextauthor1" "#A6E22E"
+\set_color "changedtextauthor2" "#d33682"
+\set_color "changedtextauthor3" "#cf4b16"
+\set_color "changedtextauthor4" "#b58900"
+\set_color "changedtextauthor5" "#859900"
+\set_color "tabularline" "#A6E22E"
+\set_color "tabularonoffline" "#AE81FF"
+\set_color "newpage" "#A6E22E"
+\set_color "pagebreak" "#75715E"
+\set_color "buttonframe" "#AE81FF"
+\set_color "buttonbg" "#252728"
+\set_color "buttonhoverbg" "#454748"
+\set_color "paragraphmarker" "#8abeb7"
+\set_color "previewframe" "#A6E22E"
+%%
+
+%
+on hp, ctrl+t for pdf output
+%%
+
+% Restoring the default bind file in LyX
+% (Unable to find bind file)
+1. Open LyX and go to About LyX. Write down your User directory (this should be copyable in the next version).
+2. Exit LyX
+3. Navigate to where your User directory is and delete it (the whole directory!). Actully, just move it so that you can restore it if necessarys.
+4. Restart LyX
+%%
+
+% In some cases LaTeX does not know how to hyphenate a word, and then it can be helped along by explicitly marking up 
+% hyphenation points. In LaTeX code this is done by \-, e.g. (3-glycid\-oxy\-propyl)\-tri\meth\-oxy....
+% In LyX you do this with Insert --> Formatting --> Hyphenation point (keyboard shortcut Ctrl + -).
+%%
+
+%
+It's pretty straightforward to install newest version of LyX from source even if on outdated distro. Just follow 
+README and INSTALL
+%%
+
+
+%% SPISY
+
+% add chapter*, section* etc. to ToC
+Wprowadzenie <<Chapter*>> % this line is as usual
+\addcontentsline{toc}{chapter}{\numberline{}Wprowadzenie} % this special line follows
+%%
+
+%%%
+
+
+
+
+%% BIBLIO
+
+% errors of bibtex are in different tab than lyx errors (shown output)
+%%
+
+% use a main bibliography for the whole multi-part document, but separate bibliographies when chapters are compiled separately
+% 1) For the main document, you just insert a bibliography inset at the place where the main bibliography has to appear (within the master file or within a child).
+% 2) Within the child documents, insert bibliography insets where the bibliography should appear when the child is compiled separately, but insert them into a branch (Insert→Branch→Insert New Branch...), e.g. called "Childonly".
+% 3) Within the children, activate the branch (Document→Settings...→Branches).
+% 4) Within the master, de-activate the branch (Document→Settings...→Branches). 
+%%
+
+%%%
+
+
+
+
+%% WYPEŁNIENIE STRONY
+
+% marginesy - najlepiej je ustawić w ustawieniach dokumentu (->marginesy):
+wewnętrzny    3 cm
+zewnętrzny    2.5 cm
+odstęp stopki 1.5 cm
+% Reszta pól niewypełniona
+%%
+
+% żeby na stronie POZIOMEJ (\begin{landscape}) obrazek wypełniał całą stronę
+ustaw szerokość: 100 procent szerokości strony
+%%
+
+% 47% szerokości tekstu (jeśli 2 obrazki obok siebie)
+% jeśli różna wysokość (ale oba kwadratowe) to po 7 cm wysokości
+%%
+
+% kolumnowy układ subfigur:
+1) wstawka->rysunek
+2) do niej wstaw tyle wstawek-rysunków (dla nich się nie określa szerokości), ile kolumn ma być
+3) do każdej tej sub-wstawki:
+- użyj wstaw->box->bezramkowe (np. 47\%)
+- wstaw do boksa całą kolumnę obrazków - każdy z nich powinien mieć 100\% SZEROKOŚCI LINII!
+%%
+
+%%%
+
+
+
+
+%% SUBDOKUMENTY
+
+% listing kodu
+Wstaw->Plik->Dokument podrzędny
+Typ wstawienia: listing kodu
+Więcej parametrów:
+breaklines=true % łamie linie, żeby nie wychodziły za marginesy
+language=Python % koloruje składnie (np.) Pythona
+captionpos=b % pozycja tytułu?
+frame=tb % położenie na stronie?
+%%
+
+%%%
+
+
+
+
+%% MATH MODE
+
+%
+sekwencja: alt+m, g, a wpisuje w trybie matematycznym (ctrl+m) alfę. Analogicznie inne greckie litery! 
+%%
+
+% Prevent LaTeX from inserting a linebreak in an inline formula (ctrl+m):
+1. Enter to math mode (either for inline formula or display formula)
+2. Type \mbox and then a press ENTER or SPACE
+3. The text "\mbox" disappears and a blue box appears in its place
+4. Select math mode (again!)
+5. Type the equation inside the box 
+%%
+
+%
+ctrl+space  - space in math environment
+%%
+
+%%%
+
+
+%% INSTALACJA, KONFIGURACJA, ZARZĄDZANIE PROJEKTEM
+
+% It's important to have main.lyx in the "most-parent" directory
+% with regard to all other files e.g. in content/.
+% Thereby ALL PATHS ARE RELATIVE and you can move the whole project 
+% somewhere else without necessity of rewriting paths
+%%
+
+% instalacja lyx > 2.2 na windowsie
+miktex musi być w wersji 32bit! Lyx: trzeba sciagnac installer 3 (chyba, ale może miktex załatwia sprawę)
+%%
+
+%%%

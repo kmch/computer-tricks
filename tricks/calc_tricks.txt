@@ -1,0 +1,13 @@
+# merge 2 cells (expandable to whole columns)
+=("prefix"&A4&"interfix"&B4)
+##
+
+#
+Some languages, like French, Italian, German, or Portuguese, use a comma as decimal separator. The appearance of numbers in Calc depends on the language settings. If you want to use the dot or decimal point as separator you need to switch the language for the corresponding cells to English:
+
+    Select the corresponding cells (press CTRL+A to select all cells of a sheet)
+    Select Format - Cells from the menu
+    Select the Numbers tab and select one of the English variants from the Language list.
+
+Set to English while pasting!!!!!!
+##

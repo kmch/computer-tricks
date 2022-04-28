@@ -1,0 +1,41 @@
+#Convert pdf to svg
+  pdf2svg <input.pdf> <output.svg> [<pdf page no. or "all" >]
+#Note: if you specify all the pages you must give a filename with %d in it (which will automatically be replaced by the appropriate page number). E.g.
+  pdf2svg input.pdf output_page%d.svg all
+# only page no.2:
+  pdf2svg input.pdf output.svg 2
+#Then ungroup and group selected equation
+##
+
+#
+How to draw a semi-circle (OR GENERALLY CREATE FRACTION OF AVAILABLE FIGURES)
+#
+You have two options: using the elipse tool (once you created a circle or elipse, you'll find a rounded little widget on the right. That icon lets you create arcs or semi-circles.
+Other option is to place a rectangle over the half you want to remove, select both and go to the path menu > difference (CTRL+-). The rectangle will be substracted from the circle.
+##
+
+#
+Wektoryzacja
+#
+shift+alt+b
+##
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

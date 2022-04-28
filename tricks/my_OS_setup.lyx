@@ -1,0 +1,547 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Section
+Adjust the terminal
+\end_layout
+
+\begin_layout Enumerate
+Theme: Black on white
+\end_layout
+
+\begin_layout Enumerate
+Shortcuts: Edit/Preferences/Shortcuts
+\end_layout
+
+\begin_layout Enumerate
+# TERMINAL TABS: SHOW ONLY CURRENT DIR, NOT A FULL PATH # (https://superuser.com/
+questions/60555/show-only-current-directory-name-not-full-path-on-bash-prompt)
+ # IN .bashrc (OR .profile OR /etc/bash.bashrc, /etc/profile, ~/.bashrc, ~/.bash_prof
+ile, ~/.profile # IF IT DOESN'T WORK case "$TERM" in xterm*|rxvt*) PS1="
+\backslash
+[
+\backslash
+e]0;${debian_chroot:+($debian_chroot)}
+\backslash
+u@
+\backslash
+h: 
+\backslash
+W
+\backslash
+a
+\backslash
+]$PS1" ;; *) # INSTEAD OF: case "$TERM" in xterm*|rxvt*) PS1="
+\backslash
+[
+\backslash
+e]0;${debian_chroot:+($debian_chroot)}
+\backslash
+u@
+\backslash
+h: 
+\backslash
+w
+\backslash
+a
+\backslash
+]$PS1" ;; *) ##
+\end_layout
+
+\begin_layout Enumerate
+
+\end_layout
+
+\begin_layout Section
+Vim
+\end_layout
+
+\begin_layout Standard
+Open Vim editor, 2) Get the path of your home directory by typing :echo
+ $HOME 3) Check if you have .vimrc file in $HOME location,(if you don't have
+ create it) 4) Add the following line line to .vimrc file set nocompatible
+ or set nocp
+\end_layout
+
+\begin_layout Section
+Trash client
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install trash-cli
+\end_layout
+
+\begin_layout Enumerate
+trash file_to_trash
+\end_layout
+
+\begin_layout Section
+Dropbox
+\end_layout
+
+\begin_layout Enumerate
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar
+ xzf -
+\end_layout
+
+\begin_layout Enumerate
+~/.dropbox-dist/dropboxd
+\end_layout
+
+\begin_layout Enumerate
+Status etc.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+mkdir ~/bin_dropbox 
+\end_layout
+
+\begin_layout Enumerate
+cd ~/bin_dropbox wget "https://www.dropbox.com/download?dl=packages/dropbox.py"
+ 
+\end_layout
+
+\begin_layout Enumerate
+mv downloaded_file dropbox.py 
+\end_layout
+
+\begin_layout Enumerate
+chmod +x dropbox.py 
+\end_layout
+
+\begin_layout Enumerate
+# NOW U R GOOD 2 GO 
+\end_layout
+
+\begin_layout Enumerate
+~/bin_dropbox/dropbox.py help
+\end_layout
+
+\end_deeper
+\begin_layout Section
+LyX
+\end_layout
+
+\begin_layout Enumerate
+sudo add-apt-repository ppa:lyx-devel/release (add the PPA for the 'release',
+ i.e.
+ stable, compilation) 
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get update (update so that apt is aware of the new PPA) 
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install lyx (install from the PPA) 
+\end_layout
+
+\begin_layout Enumerate
+lyx (run LyX) 
+\end_layout
+
+\begin_layout Section
+Firefox 
+\end_layout
+
+\begin_layout Enumerate
+AdBlock
+\end_layout
+
+\begin_layout Enumerate
+bookmarks
+\end_layout
+
+\begin_layout Section
+.profile or (worse option) .bashrc:
+\end_layout
+
+\begin_layout Enumerate
+Put line: cd ~/Dropbox/PhD to set that as a new default directory which
+ bash starts every new instance with
+\end_layout
+
+\begin_layout Enumerate
+prog(_mgr):
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+export PATH="/home/kmc3817/Dropbox/PhD/prog:$PATH" 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+python path of prog_mgr (libs)
+\end_layout
+
+\begin_layout Enumerate
+FWI bin
+\end_layout
+
+\begin_layout Enumerate
+SU bin
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+plus extra enviroment variable: 
+\series bold
+export CWPROOT='/home/kajetan/Dropbox/PhD/seismix-unix'
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+GMT bin
+\end_layout
+
+\begin_layout Section
+kate and Okular 
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get update
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install kate --no-install-recommends
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+font size: >>9
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+sudo apt-get install okular --no-install-recommends
+\end_layout
+
+\begin_layout Section
+gnome-open
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+opens a file with a default program
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+sudo apt install libgnome2-bin 
+\end_layout
+
+\begin_layout Section
+Mendeley Desktop
+\end_layout
+
+\begin_layout Enumerate
+Download from website
+\end_layout
+
+\begin_layout Enumerate
+sudo dpkg -i <path-to-downloaded-package>
+\end_layout
+
+\begin_layout Section
+pip
+\end_layout
+
+\begin_layout Enumerate
+sudo apt install python-pip 
+\end_layout
+
+\begin_layout Enumerate
+sudo pip install –upgrade pip
+\end_layout
+
+\begin_layout Section
+Python
+\end_layout
+
+\begin_layout Enumerate
+__init__.py
+\end_layout
+
+\begin_layout Enumerate
+PYTHONPATH
+\end_layout
+
+\begin_layout Section
+jupyter
+\end_layout
+
+\begin_layout Enumerate
+sudo pip install –upgrade pip
+\end_layout
+
+\begin_layout Enumerate
+sudo pip install jupyter
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Extenstions:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+sudo pip install jupyter_nbextensions_configurator jupyter_contrib_nbextensions
+ 
+\end_layout
+
+\begin_layout Enumerate
+jupyter contrib nbextension install --user
+\end_layout
+
+\begin_layout Enumerate
+jupyter nbextensions_configurator enable --user 
+\end_layout
+
+\end_deeper
+\begin_layout Section
+missing python libraries
+\end_layout
+
+\begin_layout Section
+OpendTect
+\end_layout
+
+\begin_layout Section
+SU
+\end_layout
+
+\begin_layout Standard
+suximage: CWPROOT environment variable is not set! 
+\end_layout
+
+\begin_layout Section
+GMT
+\end_layout
+
+\begin_layout Section
+git
+\end_layout
+
+\begin_layout Enumerate
+gitk
+\end_layout
+
+\begin_layout Section
+gnuplot
+\end_layout
+
+\begin_layout Section
+Fullwave3D
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install openmpi-bin
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install libopenmpi-dbg
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install libopenmpi-dev
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install libpng-dev (segyprep)
+\end_layout
+
+\begin_layout Section
+Compiz
+\end_layout
+
+\begin_layout Subsection
+Cube effect:
+\end_layout
+
+\begin_layout Enumerate
+Install Compiz Config Settings Manager
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+(Note: What are some of the issues with CCSM and why would I want to avoid
+ it?
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install compizconfig-settings-manager
+\end_layout
+
+\begin_layout Enumerate
+NOTE: If you have 12.10 or above you need to also install the compiz-plugin
+ package.
+ So instead of the final terminal line mentioned above, it would be:
+\end_layout
+
+\begin_layout Enumerate
+sudo apt-get install compizconfig-settings-manager compiz-plugins compiz-plugins
+-extra
+\end_layout
+
+\begin_layout Enumerate
+If you do not install the compiz-plugins you will not see the cube or rotate
+ plugins in the compiz plugin list.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Open Compiz Config Settings Manager and go to Preferences
+\end_layout
+
+\begin_layout Enumerate
+Select Plugin List Tab
+\end_layout
+
+\begin_layout Enumerate
+Disable Automatic Plugin Sorting and accept the warning that will appear
+ after trying to disable it.
+\end_layout
+
+\begin_layout Enumerate
+From the Disable Plugins List, Enable the following plugins: cube, rotate
+\end_layout
+
+\begin_layout Enumerate
+From the Enable Plugins List, Disable the following plugins: wall
+\end_layout
+
+\begin_layout Enumerate
+Go back from the Preferences menu to the Main Compiz Menu and select General
+ Options
+\end_layout
+
+\begin_layout Enumerate
+Disable Automatic Plugin Sorting and accept the warning that will appear
+ after trying to disable it.
+\end_layout
+
+\begin_layout Enumerate
+From the Disable Plugins List, Enable the following plugins: cube, rotate
+\end_layout
+
+\begin_layout Enumerate
+From the Enable Plugins List, Disable the following plugins: wall
+\end_layout
+
+\begin_layout Enumerate
+Go back from the Preferences menu to the Main Compiz Menu and select General
+ Options
+\end_layout
+
+\begin_layout Enumerate
+Go to Desktop Size tab and change the Horizontal and Vertical Virtual Size
+ to 4:
+\end_layout
+
+\begin_layout Enumerate
+to check if OK: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Simply leave CTRL+ALT pressed and then with the Arrow keys press -> or <-
+ to rotate Right or Left, respectively.
+\end_layout
+
+\begin_layout Enumerate
+You can also (If you mouse has support for a third middle button), leave
+ the middle button pressed while in the desktop (Without selecting anything
+ else) and move your mouse around.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+If it stops working (e.g.
+ since we tried 'wall' in the meantime, try to reset compiz – check it out
+ online how to do it)
+\end_layout
+
+\end_body
+\end_document

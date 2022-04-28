@@ -1,0 +1,24 @@
+# my favourite themes:
+# - light: Github LightTheme Gray
+# - dark:  FireFly Pro Bright
+
+
+ctrl+=                   - zoom in
+ctrl+-                   - zoom out
+ctrl+k+0                 - fold all
+ctrl+k+t                 - color theme
+shift+alt + (drag mouse) - column (box) selection
+
+# hide (e.g. *.pye files)
+File/Settings/<type "exclude">/<click add pattern: **/*.pye 
+# NOTE: all asterisks  above matter
+
+
+# saved workspaces: opened folders, files and settings (e.g. hiding *.pye files)
+kmc3817@ese-kajetan.../software/vscode_workspaces
+##
+
+# "unsplit" editor groups without closing any open files
+View > Editor Layout > Single
+# or, while in the editor, press and release ALT and then type vls
+##

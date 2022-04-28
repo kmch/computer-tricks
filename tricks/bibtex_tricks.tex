@@ -1,0 +1,134 @@
+%% NATBIB
+
+% FOR SPRINGER JOURNALS I HAD TO ADD:
+\usepackage[sort&compress]{natbib}
+% TO MAKE WORK THE FOLLOWING STYLE:
+\bibliographystyle{spbasic} % basic style, author-year citations
+%%
+
+
+% opcje natbiba
+%Opcja 		Znaczenie
+round	 	%Nawiasy () (domyślne)
+square	 	%Nawiasy kwadratowe []
+curly 		%Curly braces {}
+angle 		%nawiasy ostrokątne <>
+colon	 	%wielokrotne odwołania oddzielone są średnikami (domyślnie)
+comma 		%wielokrotne odwołania oddzielone są przecinkami
+authoryear 	%styk autor-rok (domyślny)
+numbers 	%zwykła numeracja
+super 		%superscripted numeric citations
+sort 		%wielokrotne odwołania sortowanę są zgodnie z występowaniem w bibliografii
+sort&compress 	%jak wyżej + kompresowanie wielokrotnych pozycji w bibliografii
+longnamesfirst 	%pierwsze odwołanie do każdej pozycji w bibliografii spowoduje wypisanie wszystkich autorów, kolejne odwołania po pierwszym nazwisku będą miały wpisane et al.
+sectionbib 	%używane z pakietem chapterbib. zmienia \chapter* na \section*
+nonamebreak 	%powoduje utrzymanie listy nazwisk autorów w odnośniku w jednej linii
+%% 
+
+%
+\bibpunct{(}{)}{;}{a}{,}{,}
+%     Symbol otwieranego nawiasu.
+%     Symbol zamykanego nawiasu.
+%     Symbol jaki pojawi się między wielokrotnymi odwołaniami.
+%     Jedna z trzech możliwości:
+%         n - styl numeryczny.
+%         s - inny styl numeryczny.
+%         inna litera - styl autor-rok.
+%     Znak pojawiający się między nazwiskiem autora a rokiem (tylko w przypadku nawiasowym).
+%     Znak pojawiający się między latami, w przypadku wielokrotnego odniesienia do artykułów napisanych przez jednego autora, np. (Chomsky 1956, 1957). Aby otrzymać dodatkową spację, należy użyć komendy {,~}.
+%%
+
+
+
+% tekst przed i po, wewnątrz nawiasów
+\citep[e.g.][page 3]{Foster2014} 
+%%
+
+%
+\citet{goossens93} 	Goossens et al. (1993) % 't' for textual
+\citep{goossens93} 	(Goossens et al., 1993) % 'p' for parantheses
+\citet*{goossens93} 	Goossens, Mittlebach, and Samarin (1993)
+\citep*{goossens93} 	(Goossens, Mittlebach, and Samarin, 1993)
+\citeauthor{goossens93} Goossens et al.
+\citeauthor*{goossens93}Goossens, Mittlebach, and Samarin
+\citeyear{goossens93} 	1993
+\citeyearpar{goossens93}(1993)
+\citealt{goossens93} 	Goossens et al. 1993
+\citealp{goossens93} 	Goossens et al., 1993
+%%
+
+
+%%%
+
+% zmiana et al. na i in., wyedytuj plik .bst w miejscu:
+FUNCTION {bbl.etal}
+%%
+
+
+% Cytowanie www
+@misc{WinNT,
+  title = {{MS Windows NT} Kernel Description},
+  howpublished = {\url{http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm}},
+  note = {Accessed: 2010-09-30}
+}
+%%
+
+% zastąpienie słowa 'and' przecinkiem.
+% W pliku 
+unsrturl.bst 
+% z katalogu 
+/usr/share/texmf-texlive/bibtex/bst/urlbst 
+% wyedytowałem następujące linie (docelowa postać podana na prawo od numeru):
+336 		{ "" * }
+341 		{ ", " * t * }
+619 		{ ", " * editor #2 "{vv~}{ll}" format.name$ * }
+%%
+
+
+% Lic. z fizyki:
+% STYL: 
+myunsrt
+%DOMYŚLNY STYL:
+\use_bibtopic false
+%%
+
+% W pliku .bib jeśli zapomni się przecinka po rekordzie, to ostatni rekord nie będzie już wyświetlony! 
+% Brak przecinka jest dozwolony więc tylko po ostatnim rekordzie. 
+%%
+
+
+% Włączenie bazy bibliograficznej w pliku następuje poprzez użycie polecenia bibliography: 
+\bibliography{plik} 
+% gdzie plik to nazwa pliku z bazą)
+%%
+
+
+% Ogólny podział na 4 style cytowania:
+    plain - pozycje bibliograficzne są posortowane alfabetycznie i ponumerowane,
+    unsrt - pozycje bibliograficzne występują w kolejności cytowania i są ponumerowane [1], [2], ...
+    alpha - pozycje są posortowane, ale zamiast numerów mają etykiety typu Gu96,
+    abbrv - format podobny do plain, ale imiona autorów, nazwy miesięcy i nazwy czasopism są skracane.
+%%
+
+
+% program MAKEBST (składnik pakietu custombib)
+% tryb interaktywny
+latex makebst
+% tryb wsadowy - szybciej wyedytować zrobiony wcześniej szablon makebst_default.dbj a następnie w konsoli wpisać:
+tex plik.dbj
+% co wygeneruje plik.bst, który można wczytać w LyX, klikając w bibliografię i wybierając plik stylu.
+
+% UWAGA, ten styl 'jest w stylu' stylu 'plain' (author-year). 
+% Wymaga pakietu natbib, należy wpisać w preambule pliku LaTeXowego:
+\usepackage[round]{natbib} % round for parantheses instead of brackets
+\renewcommand{\cite}{
+   \citep 
+} % bo domyślnie LyX wstawia cytowanie poprzez komendę \cite, a to daje 
+% gorszy efekt (można zresztą to zahaszować i zobaczyć
+
+% Ważne linie do wyedytowania
+
+% separation of key words (blocks/section, e.g. title and journal)
+%PUNCTUATION BETWEEN SECTIONS (BLOCKS):
+blk-com,%: Comma between blocks
+%%
